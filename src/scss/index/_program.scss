@@ -1,0 +1,104 @@
+.program {
+  position: relative;
+	width: 100%;
+
+  .video-container {
+    width: 100%;
+		max-height: 70rem;
+		overflow: hidden;
+  }
+
+  .program-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    .container {
+		
+		display: flex;
+		justify-content: center;
+		align-items: center;
+			.program-event {
+				background: $blancoTransparente;
+				padding: 2rem;
+				width: 50%;
+				margin-top: 8rem;
+				-webkit-box-shadow: 0px 0px 30px 0px rgba(145,145,145,1);
+				-moz-box-shadow: 0px 0px 30px 0px rgba(145,145,145,1);
+				box-shadow: 0px 0px 30px 0px rgba(145,145,145,1);
+
+				@include breakpoint($breakpointTablet){width: 65%;}
+				@include tablet{width: 70%;}
+				@include telefono{width: 100%; margin-top: 4rem;}
+				
+				.program-menu{
+					width: 100%;
+					display: flex;
+					justify-content: space-evenly;
+					border-bottom: .1rem solid $naranja;
+					padding-bottom: 1rem;
+					text-align: center;
+
+					@include telefono{flex-direction: column;}
+
+					a{
+						text-align: center;
+						color: $negro;
+						font-family: $titlesFont;
+						font-size: 1.5rem;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+
+						@include telefono{margin-bottom: 1rem;}
+
+						i{
+							color: $naranja;
+							margin-right: .6rem;
+							font-size: 2rem;
+						}
+					}
+				}
+
+				.course-info{
+					hr{
+						margin: 0;
+						margin-top: 1rem;
+					}
+					.event-detail{
+						padding: 1rem 2rem;
+
+						h3{
+							text-align: start;
+							font-size: 2rem;
+							margin: 1rem 0;
+							font-family: $logoFont;
+							font-weight: $bold;
+						}
+
+						p{
+							margin-bottom: 1.7rem;
+							font-size: 1.7rem;
+							
+							i{
+								color: $naranja;
+								margin-right: .6rem;
+								font-size: 2rem;
+							}
+						}
+					}
+
+					.button-container{
+						display: flex;
+						justify-content: flex-end;
+						.button{
+							@include button($naranja, $blanco, inline-block);
+						}
+					}
+				}
+			}
+		}
+  }
+}

@@ -1,0 +1,55 @@
+.guests{
+	.invited-list{
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		column-gap: 1.3rem;
+		row-gap: 2.5rem;
+
+		@include tablet{grid-template-columns: repeat(2, 1fr);}
+		@include telefono{grid-template-columns: 1fr;}
+
+		.invited{
+			position: relative;
+			overflow: hidden;
+			transition: all .5s ease-in-out;
+
+			&:hover{
+				z-index: 2;
+				transform: scale(1.04);
+				-webkit-box-shadow: 0px 0px 41px -4px rgba(0,0,0,0.75);
+				-moz-box-shadow: 0px 0px 41px -4px rgba(0,0,0,0.75);
+				box-shadow: 0px 0px 41px -4px rgba(0,0,0,0.75);
+
+				img{
+					filter: none;
+					-webkit-filter: none;
+				}
+
+				p{
+					bottom: -8rem;
+					opacity: 0;
+				}
+			}
+
+			img{
+				filter: gray;
+				-webkit-filter: grayscale(1);
+				transition: all .5s ease-in-out;
+			}
+
+			p{
+				background: rgba(0,0,0,.55);
+				width: 100%;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				padding: 1.5rem 2rem;
+				color: $naranja;
+				font-size: 2.3rem;
+				font-family: $titlesFont;
+				text-transform: uppercase;
+				transition: all .5s ease-in-out;
+			}
+		}
+	}
+}

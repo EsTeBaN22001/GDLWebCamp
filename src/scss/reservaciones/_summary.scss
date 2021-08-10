@@ -1,0 +1,44 @@
+.summary{
+  .box{
+    background: $blanco;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2rem;
+
+    .order{
+      label, input, select{
+        display: block;
+        margin-bottom: 1rem;
+        outline: none;
+        font-size: 1.5rem;
+      }
+
+    }
+
+    .total{
+      padding: 3rem;
+
+      h4{
+        text-align: start;
+        color: $naranja;
+        font-weight: $bold;
+      }
+
+      #list-products,
+      #sum-total{
+        padding: 2rem;
+        font-size: 1.5rem;
+        line-height: 2;
+        color: $negro;
+      }
+
+      #sum-total{
+        font-size: 2.3rem;
+      }
+    }
+
+    .button{
+      @include button($naranja, $blanco, inline-block)
+    }
+  }
+}

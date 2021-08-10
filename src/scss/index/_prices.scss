@@ -1,0 +1,79 @@
+.prices{
+  .list-prices{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    @include tablet{grid-template-columns: 1fr;}
+
+    li{
+      padding: 1rem;
+
+      .table-price{
+        border: .1rem solid #e1e1e1;
+        background-color: $blanco;
+        padding: 4rem 0;
+        text-align: center;
+        transition: all .3s ease-in-out;
+
+        &:hover{
+          transform: scale(1.05);
+          border: .1rem solid $naranja;
+          box-shadow: 0 0 5rem #666;
+        }
+
+        h3{
+          font-size: 2rem;
+          font-weight: $bold;
+          text-transform: uppercase;
+        }
+
+        .num{@include num($negro){
+          font-size: 5rem;
+          margin-bottom: 0;
+          font-family: $titlesFont;
+
+          &:hover{
+            transform: none;
+        }
+        }}
+
+        li{
+          font-family: $logoFont;
+          font-size: 1.5rem;
+          padding: .8rem;
+          text-transform: uppercase;
+
+          &::before{
+            font-family: 'Font Awesome 5 Free';
+            display: inline-block;
+            vertical-align: center;
+            padding: 0 .5rem;
+            font-size: 2rem;
+            color: green;
+            -webkit-font-smoothing: antialiased;
+            font-weight: 900;
+            content: "\f00c";
+          }
+        }
+
+        .button{
+          @include button($naranja, $blanco,inline-block){margin-top: 3rem;}
+
+          &.hollow{
+            @include button($blanco, $naranja, inline-block)
+          }
+        }
+
+        .input-price{
+          display: block;
+          width: 7rem;
+          height: 3rem;
+          margin: 1rem auto 0 auto;
+          clear: both;
+          text-align: center;
+          outline: none;
+        }
+      }
+    }
+  }
+}

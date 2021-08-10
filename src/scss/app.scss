@@ -1,0 +1,25 @@
+// Carpeta base
+@import "base/normalize";
+@import "base/main";
+@import "base/variables";
+@import "base/mixins";
+@import "base/globales";
+@import "base/utilidades";
+
+// Estilos del index
+@import "index/header";
+@import "index/nav-bar";
+@import "index/program";
+@import "index/invited";
+@import "index/counter";
+@import "index/prices";
+@import "index/map";
+@import "index/testimonials";
+@import "index/newsletter";
+@import "index/count-down";
+@import "index/footer";
+
+// Estilos de la página de reservaciones
+@import 'reservaciones/registration';
+@import 'reservaciones/events';
+@import 'reservaciones/summary';

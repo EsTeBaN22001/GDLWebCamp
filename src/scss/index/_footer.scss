@@ -1,0 +1,28 @@
+.site-footer{
+  background: $grisOscuro;
+
+  .container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+
+    .footer-section{
+      h3{
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+
+        span{
+          color: $naranja;
+        }
+      }
+
+      h3, p{
+        color: $blanco;
+      }
+    }
+
+    .redes-sociales{
+      padding: 0;
+    }
+  }
+}

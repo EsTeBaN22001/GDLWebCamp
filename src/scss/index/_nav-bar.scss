@@ -1,0 +1,83 @@
+.nav-bar{
+	background: $grisOscuro;
+	height: 14vh;
+	@include tablet{height: auto;}
+
+	.container{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+    height: 100%;
+
+		@include tablet{
+      flex-direction: column;
+      .principal-nav{
+        display: none;
+      }
+    }
+
+		.logo-container{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			
+			.logo{
+        max-width: 35rem;
+        @include tablet{width: 60%;}
+        @include telefono{width: 80%;}
+      }
+
+
+      .btn-menu{
+        font-size: 3rem;
+        color: $blanco;
+        display: none;
+        
+        &:hover{
+          cursor: pointer;
+        }
+        
+        @include tablet{display: block;}
+      }
+		}
+
+		.principal-nav{
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      transition: all .3s ease;
+  
+      a{
+        font-family: $titlesFont;
+        color: $blanco;
+        font-size: 2rem;
+        padding: .7rem 1.7rem;
+        text-transform: uppercase;
+        border: .2rem solid transparent;
+        transition: all .3s ease;
+
+        &:last-child{
+          border: .2rem solid $naranja;
+          color: $naranja;
+        }
+
+        &:hover{
+          background: $naranja;
+          border: .2rem solid $naranja;
+
+          &:last-child{
+            color: $blanco;
+          }
+        }
+
+        @include tablet{margin: 0 auto; display: none;}
+        @include breakpoint($breakpointTablet){padding: .4rem 1.4rem;font-size: 1.7rem;}
+			}
+
+      @include tablet{
+        flex-direction: column;
+        text-align: center;
+      }
+		}
+	}
+}

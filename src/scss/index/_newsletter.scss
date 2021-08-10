@@ -1,0 +1,36 @@
+.newsletter{
+  position: relative;
+  height: auto;
+
+  &::before{
+    background-image: url('/build/img/bg-newsletter.webp');
+    content: '';
+  }
+
+  .newsletter-content{
+    position: relative;
+    padding: 10rem 0;
+    text-align: center;
+    
+    p{
+      color: $blanco;
+      font-size: 2rem;
+    }
+
+    h3{
+      color: $blanco;
+      font-size: 7vw;
+      font-family: $logoFont;
+      font-weight: $bold;
+      text-transform: uppercase;
+    }
+
+    .button{
+      @include button(transparent, $blanco, inline-block){
+        &:hover{
+          background: $naranja;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.registration{
+  
+  .user-data{
+    background: $blanco;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    label{
+      display: inline-block;
+      font-weight: $bold;
+      margin-bottom: .5rem;
+    }
+  }
+
+  .prices{
+    .container{
+      .list-prices{
+        li{
+          .table-price{
+            &:hover{
+              transform: none;
+              box-shadow: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

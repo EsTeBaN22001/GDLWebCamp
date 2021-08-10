@@ -1,0 +1,29 @@
+.counter{
+	position: relative;
+	height: auto;
+	
+	&::before{
+		background-image: url('/build/img/bg-resumen.webp');
+		content: '';
+	}
+
+	.event-summary{
+		position: relative;
+		padding: 12rem 0;
+
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		justify-items: center;
+		@include tablet{grid-template-columns: repeat(2, 1fr);row-gap: 8rem;}
+		
+		li, p{
+			font-family: $titlesFont;
+			font-size: 2.4rem;
+			text-align: center;
+			color: $blanco;
+			text-transform: uppercase;
+
+			.num{@include num($naranja)}
+		}
+	}
+}
