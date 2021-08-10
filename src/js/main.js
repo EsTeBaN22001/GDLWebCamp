@@ -31,6 +31,11 @@
     completDay.addEventListener('blur', showDays);
     passTwoDays.addEventListener('blur', showDays);
 
+    name.addEventListener('blur', validateFields);
+    surname.addEventListener('blur', validateFields);
+    email.addEventListener('blur', validateFields);
+    email.addEventListener('blur', validateMail);
+
     function calcAmounts(event){
       event.preventDefault();
       if(gift.value === ''){
@@ -102,6 +107,28 @@
 
       for (let i = 0; i < chosenDays.length; i++) {
         document.getElementById(chosenDays[i]).style.display = 'block';
+      }
+    }
+
+    function validateFields(){
+      if(this.value == ''){
+        error.style.display= 'block';
+        error.innerHTML = 'Este campo es obligatorio';
+        this.style.border = '.2rem solid red';
+      }else{
+        error.style.display = 'none';
+        this.style.border = '.2rem solid #ccc';
+      }
+    }
+
+    function validateMail(){
+      if(this.value.indexOf('@') > -1){
+        error.style.display = 'none';
+        this.style.border = '.2rem solid #ccc';
+      }else{
+        error.style.display= 'block';
+        error.innerHTML = 'No es un correo válido';
+        this.style.border = '.2rem solid red';
       }
     }
   }); //DOMContentLoaded
