@@ -27,6 +27,10 @@
 
     calc.addEventListener('click', calcAmounts);
 
+    passDay.addEventListener('blur', showDays);
+    completDay.addEventListener('blur', showDays);
+    passTwoDays.addEventListener('blur', showDays);
+
     function calcAmounts(event){
       event.preventDefault();
       if(gift.value === ''){
@@ -69,7 +73,7 @@
           productsList.push(`${cantEtiquetas} Etiquetas`);
         }
 
-        productsList.innerHTML = '';
+        resumen.innerHTML = '';
 
         for (let i = 0; i < productsList.length; i++) {
           resumen.innerHTML += `${productsList[i]} <br/>`;
@@ -79,5 +83,26 @@
       }
     }
 
+    function showDays(){
+      let ticketsDay = parseInt(passDay.value, 10) || 0;
+      let ticketsTwoDays = parseInt(passTwoDays.value, 10) || 0;
+      let ticketsCompletDay = parseInt(completDay.value, 10) || 0;
+
+      let chosenDays = [];
+
+      if(ticketsDay > 0){
+        chosenDays.push('viernes');
+      }
+      if(ticketsTwoDays > 0){
+        chosenDays.push('viernes', 'sabado');
+      }
+      if(ticketsCompletDay > 0){
+        chosenDays.push('viernes', 'sabado', 'domingo');
+      }
+
+      for (let i = 0; i < chosenDays.length; i++) {
+        document.getElementById(chosenDays[i]).style.display = 'block';
+      }
+    }
   }); //DOMContentLoaded
 })();

@@ -6,6 +6,8 @@
     grid-template-columns: repeat(3, 1fr);
     column-gap: 2rem;
 
+    @include tablet{grid-template-columns: 1fr;};
+
     .footer-section{
       h3{
         text-transform: uppercase;

@@ -5,6 +5,8 @@
     grid-template-columns: repeat(2, 1fr);
     padding: 2rem;
 
+    @include telefono{grid-template-columns: 1fr;};
+
     .order{
       label, input, select{
         display: block;
@@ -12,11 +14,24 @@
         outline: none;
         font-size: 1.5rem;
       }
+    }
 
+    @include telefono{
+      .extra{
+        &::after{
+          content: '';
+          border-bottom: .2rem solid $grisOscuro;
+          display: block;
+          width: 100%;
+          margin: 1rem 0;
+        }
+      }
     }
 
     .total{
-      padding: 3rem;
+      margin-left: 2rem;
+
+      @include telefono{margin-top: 1rem; margin-left: 0;}
 
       h4{
         text-align: start;
