@@ -1,56 +1,57 @@
 /** Media Queries **/
 @mixin telefono {
-    @media (max-width: #{$telefono}) {
-        @content;
-    }
+  @media (max-width: #{$telefono}) {
+    @content;
+  }
 }
 
 @mixin tablet {
-    @media (max-width: #{$tablet}) {
-        @content;
-    }
+  @media (max-width: #{$tablet}) {
+    @content;
+  }
 }
 
 @mixin breakpoint($breakpoint) {
-    @media (max-width: #{$breakpoint}) {
-        @content;
-    }
+  @media (max-width: #{$breakpoint}) {
+    @content;
+  }
 }
 
 @mixin desktop {
-    @media (max-width: #{$desktop}) {
-        @content;
-    }
+  @media (max-width: #{$desktop}) {
+    @content;
+  }
 }
 
 @mixin button($bgColor, $color, $display){
-    background: $bgColor;
-    display: $display;
-    padding: 1rem 4rem;
-    color: $color;
-    text-transform: uppercase;
-    font-family: $titlesFont;
-    font-weight: $bold;
-    font-size: 1.8rem;
-    border: .2rem solid $naranja;
-    transition: background .3s ease;
+  background: $bgColor;
+  display: $display;
+  padding: 1rem 4rem;
+  color: $color;
+  text-transform: uppercase;
+  font-family: $titlesFont;
+  font-weight: $bold;
+  font-size: 1.8rem;
+  cursor: pointer;
+  border: .2rem solid $naranja;
+  transition: background .3s ease;
 
-    &:hover{
-        background: darken($bgColor, 7);
-    }
-    @content;
+  &:hover{
+    background: darken($bgColor, 9);
+  }
+  @content;
 }
 
 @mixin num($color){
-    display: block;
-    color: $color;
-    font-size: 6rem;
-    margin-bottom: 1rem;
-    font-weight: $bold;
-    transition: transform .7s ease-in-out;
+  display: block;
+  color: $color;
+  font-size: 6rem;
+  margin-bottom: 1rem;
+  font-weight: $bold;
+  transition: transform .7s ease-in-out;
 
-    &:hover{
-        transform: rotate(360deg);
-    }
-    @content;
+  &:hover{
+    transform: rotate(360deg);
+  }
+  @content;
 }
