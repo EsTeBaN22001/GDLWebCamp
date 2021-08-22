@@ -23,6 +23,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald&family=PT+Sans&display=swap"/>
 
+    <!-- Mapa con Leaflet.js -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
     <meta name="theme-color" content="#fafafa" />
   </head>
 
@@ -100,7 +103,7 @@
               <a href="#conferencias"><i class="fas fa-comment"></i>Conferencias</a>
               <a href="#seminarios"><i class="fas fa-university"></i>Seminarios</a>
             </nav>
-            <div id="talleres" class="course-info hide">
+            <div id="talleres" class="course-info hidden">
               <div class="event-detail">
                 <h3>HTML5, CSS3, JavaScript</h3>
                 <p><i class="fas fa-clock"></i>16:00 hrs</p>
@@ -113,6 +116,42 @@
                 <p><i class="fas fa-clock"></i>20:00 hrs</p>
                 <p><i class="fas fa-calendar"></i>10 de Dic</p>
                 <p><i class="fas fa-user"></i>Juan Pablo De La Torre</p>
+              </div>
+              <div class="button-container">
+                <a href="#" class="button">Ver todos</a>
+              </div>
+            </div>
+            <div id="conferencias" class="course-info hidden">
+              <div class="event-detail">
+                <h3>Como ser freelancer</h3>
+                <p><i class="fas fa-clock"></i>10:00 hrs</p>
+                <p><i class="fas fa-calendar"></i>10 de Dic</p>
+                <p><i class="fas fa-user"></i>Gregorio Sanchez <p>
+              </div>
+              <hr>
+              <div class="event-detail">
+                <h3>Tecnologias del futuro</h3>
+                <p><i class="fas fa-clock"></i>17:00 hrs</p>
+                <p><i class="fas fa-calendar"></i>10 de Dic</p>
+                <p><i class="fas fa-user"></i>Susan Sanchez</p>
+              </div>
+              <div class="button-container">
+                <a href="#" class="button">Ver todos</a>
+              </div>
+            </div>
+            <div id="seminarios" class="course-info hidden">
+              <div class="event-detail">
+                <h3>Diseño UI/UX para móviles</h3>
+                <p><i class="fas fa-clock"></i>17:00 hrs</p>
+                <p><i class="fas fa-calendar"></i>11 de Dic</p>
+                <p><i class="fas fa-user"></i>Harold García</p>
+              </div>
+              <hr>
+              <div class="event-detail">
+                <h3>Aprende a programar en una mañana</h3>
+                <p><i class="fas fa-clock"></i>10:00 hrs</p>
+                <p><i class="fas fa-calendar"></i>11 de Dic</p>
+                <p><i class="fas fa-user"></i>Susana Rivera</p>
               </div>
               <div class="button-container">
                 <a href="#" class="button">Ver todos</a>
@@ -301,18 +340,22 @@
       </div>
     </footer>
 
+    <!-- Script js para el mapa con Leaflet.js -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    
     <!-- Add your site or application content here -->
-    <script src="build/js/bundle.js"></script>
-    <script src="build/js/bundle.js.map"></script>
     <script
-      src="https://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"
     ></script>
+    
+    <script src="build/js/index.js"></script>
+
     <script>
       window.jQuery ||
         document.write(
-          '<script src="js/vendor/jquery-3.4.1.min.js"><\/script>'
+          '<script src="/build/js/vendor/jquery-3.4.1.min.js"><\/script>'
         );
     </script>
 

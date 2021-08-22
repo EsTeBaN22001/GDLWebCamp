@@ -29,14 +29,14 @@ function css() {
 }
 
 
-function javascript() {
-    return src(paths.js)
-        .pipe(sourcemaps.init())
-        .pipe(concat('bundle.js')) // final output file name
-        .pipe(terser())
-        .pipe(sourcemaps.write('.'))
-        .pipe(dest('./build/js'))
-}
+// function javascript() {
+//     return src(paths.js)
+//         .pipe(sourcemaps.init())
+//         .pipe(concat('bundle.js')) // final output file name
+//         .pipe(terser())
+//         .pipe(sourcemaps.write('.'))
+//         .pipe(dest('./build/js'))
+// }
 
 function imagenes() {
     return src(paths.imagenes)
@@ -55,10 +55,9 @@ function versionWebp() {
 
 function watchArchivos() {
     watch( paths.scss, css );
-    watch( paths.js, javascript );
     watch( paths.imagenes, imagenes );
     watch( paths.imagenes, versionWebp );
 }
 
-exports.default = parallel(css, javascript,  imagenes, versionWebp, watchArchivos ); 
-exports.watch = series(css, javascript, watchArchivos);
+exports.default = parallel(css, imagenes, versionWebp, watchArchivos ); 
+exports.watch = series(css, watchArchivos);
