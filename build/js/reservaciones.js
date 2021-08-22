@@ -1,4 +1,8 @@
-(function(){
+if(document.getElementById('gift')){
+  reservaciones();
+}
+
+function reservaciones(){
   'use strict';
 
   const gift = document.querySelector('#gift');
@@ -132,4 +136,4 @@
       }
     }
   }); //DOMContentLoaded
-})();
+};
