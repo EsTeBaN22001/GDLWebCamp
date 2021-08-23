@@ -18,6 +18,9 @@ L.marker([-33.273946, -426.324935]).addTo(map)
 
 
 $(document).ready(function(){
+  // Lettering del logo GDLWebCamp
+  $('.site-name').lettering();
+  
   // Código para los tabs del programa del evento en la páina index.html
   $('div.hidden').hide();
 
