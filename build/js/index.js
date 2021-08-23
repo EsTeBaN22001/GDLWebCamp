@@ -1,5 +1,5 @@
-<<<<<<< HEAD
-// Mapa de leaflet.js
+if(document.getElementById('map')){
+  // Mapa de leaflet.js
 var map = L.map('map').setView([-33.273946, -426.324935], 17);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -12,25 +12,19 @@ L.marker([-33.273946, -426.324935]).addTo(map)
   .bindTooltip('Un tooltip')
   .openTooltip();
 
+}
 
-=======
->>>>>>> b6683c52928753fd7c9e84fd02b15033ece1d2a0
+
 //-----------------------------------------------------------------------//
 //------------------------------- Jquery -------------------------------//
 //---------------------------------------------------------------------//
 
 
-<<<<<<< HEAD
 $(document).ready(function(){
   // Lettering del logo GDLWebCamp
   $('.site-name').lettering();
   
   // Código para los tabs del programa del evento en la páina index.html
-=======
-// Código para los tabs del programa del evento en la páina index.html
-$(document).ready(function(){
-
->>>>>>> b6683c52928753fd7c9e84fd02b15033ece1d2a0
   $('div.hidden').hide();
 
   $('.program-event .course-info:first').show();
@@ -45,7 +39,6 @@ $(document).ready(function(){
 
     return false;
   })
-<<<<<<< HEAD
 
 
   // Animación para los números
@@ -62,6 +55,3 @@ $(document).ready(function(){
     $('#seconds').html(event.strftime('%S'));
   })
 })
-=======
-})
->>>>>>> b6683c52928753fd7c9e84fd02b15033ece1d2a0
