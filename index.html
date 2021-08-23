@@ -207,10 +207,10 @@
     <section class="counter parallax section">
       <div class="container">
         <ul class="event-summary">
-          <li><p class="num">6</p> invitados</li>
-          <li><p class="num">15</p> talleres</li>
-          <li><p class="num">3</p> dias</li>
-          <li><p class="num">9</p> conferencias</li>
+          <li><p class="num"></p> invitados</li>
+          <li><p class="num"></p> talleres</li>
+          <li><p class="num"></p> dias</li>
+          <li><p class="num"></p> conferencias</li>
         </ul>
       </div>
     </section>
@@ -308,10 +308,10 @@
 			<h2>Faltan</h2>
 			<div class="count-down container">
 				<ul>
-					<li><p class="num">8</p>días</li>
-					<li><p class="num">15</p>horas</li>
-					<li><p class="num">5</p>minutos</li>
-					<li><p class="num">30</p>segundos</li>
+					<li><p id="days" class="num"></p>días</li>
+					<li><p id="hours" class="num"></p>horas</li>
+					<li><p id="minutes" class="num"></p>minutos</li>
+					<li><p id="seconds" class="num"></p>segundos</li>
 				</ul>
 			</div>
 		</section>
@@ -351,6 +351,10 @@
     ></script>
     
     <script src="build/js/index.js"></script>
+
+    <!-- Plugins JQuery -->
+    <script src="build/js/jquery.animateNumber.min.js"></script>
+    <script src="build/js/jquery.countdown.min.js"></script>
 
     <script>
       window.jQuery ||
