@@ -11,7 +11,6 @@ if(document.getElementById('map')){
     .openPopup()
     .bindTooltip('Un tooltip')
     .openTooltip();
-
 }
 
 
@@ -83,4 +82,4 @@ $(document).ready(function(){
     $('#minutes').html(event.strftime('%M'));
     $('#seconds').html(event.strftime('%S'));
   });
-})
+});
