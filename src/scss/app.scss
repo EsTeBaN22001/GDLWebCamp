@@ -21,12 +21,15 @@
 @import "index/footer";
 
 // Estilos de la página de reservaciones
-@import 'reservaciones/registration';
-@import 'reservaciones/events';
-@import 'reservaciones/summary';
+@import 'otherPages/reservations/registration';
+@import 'otherPages/reservations/events';
+@import 'otherPages/reservations/summary';
 
 // Estilos de la página de conferencias
-@import 'conferences/galery';
+@import 'otherPages/conferences/galery';
+
+// Estilos de la página de calendario
+@import 'otherPages/calendary/calendary';
 
 // Archivos para librerias
 @import 'libraries/lightbox';

@@ -1,0 +1,42 @@
+.calendary{
+  hr{
+    margin: 2rem 0;
+  }
+  
+  h3{
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background-color: $naranja;
+    color: $blanco;
+  }
+  .day-content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    @include tablet{grid-template-columns: repeat(2, 1fr);}
+    @include telefono{grid-template-columns: 1fr;}
+
+    .day{
+      padding: 1rem;
+      text-align: center;
+      border: .2rem solid $gris;
+      transition: all .3s ease;
+
+      .title{
+        font-size: 2rem;
+        text-transform: uppercase;
+      }
+
+      i{
+        color: $naranja;
+        font-size: 1.7rem;
+      }
+
+      &:hover{
+        background-color: $gris;
+        transform: scale(1.1);
+      }
+    }
+  }
+}
