@@ -87,47 +87,7 @@
   </div>
 </div>
 
-<section class="guests container section">
-  <h2>Nuestros invitados</h2>
-  <ul class="invited-list">
-    <li>
-      <div class="invited">
-        <img src="/build/img/invitado1.webp" alt="Imagen del primer invitado">
-        <p>Rafael Bautista</p>
-      </div>
-    </li>
-    <li>
-      <div class="invited">
-        <img src="/build/img/invitado2.webp" alt="Imagen del primer invitado">
-        <p>Shari Herrera</p>
-      </div>
-    </li>
-    <li>
-      <div class="invited">
-        <img src="/build/img/invitado3.webp" alt="Imagen del primer invitado">
-        <p>Gregorio Sanchez</p>
-      </div>
-    </li>
-    <li>
-      <div class="invited">
-        <img src="/build/img/invitado4.webp" alt="Imagen del primer invitado">
-        <p>Susana Rivera</p>
-      </div>
-    </li>
-    <li>
-      <div class="invited">
-        <img src="/build/img/invitado5.webp" alt="Imagen del primer invitado">
-        <p>Harold Garcia</p>
-      </div>
-    </li>
-    <li>
-      <div class="invited">
-        <img src="/build/img/invitado6.webp" alt="Imagen del primer invitado">
-        <p>Susan Sanchez</p>
-      </div>
-    </li>
-  </ul>
-</section>
+<?php require_once('includes/templates/guests.php'); ?>
 
 <section class="counter parallax section">
   <div class="container">
@@ -184,9 +144,7 @@
   </div>
 </section>
 
-<div id="map" class="map">
-
-</div>
+<div id="map" class="map"></div>
 
 <section class="section">
   <h2>Testimoniales</h2>

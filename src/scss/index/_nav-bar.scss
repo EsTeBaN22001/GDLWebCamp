@@ -77,6 +77,10 @@
         border: .2rem solid transparent;
         transition: all .3s ease;
 
+        &.active{
+          border-bottom: .2rem solid $naranja;
+        }
+
         &:last-child{
           border: .2rem solid $naranja;
           color: $naranja;

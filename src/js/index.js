@@ -23,6 +23,11 @@ $(document).ready(function(){
   // Lettering del logo GDLWebCamp
   $('.site-name').lettering();
 
+  // Código para resaltar la página actual
+  $('body.conferences .principal-nav a:contains("Conferencia")').addClass('active');
+  $('body.calendary .principal-nav a:contains("Calendario")').addClass('active');
+  $('body.guests .principal-nav a:contains("Invitados")').addClass('active');
+
   // Código para dejar fijo el nav-bar
   let windowHeight = $(window).height();
   let navBarHeight= $('.nav-bar').innerHeight();
@@ -66,10 +71,10 @@ $(document).ready(function(){
   if(listSummary.length > 0){
     $('.event-summary').waypoint(function(){
       // Animación para los números
-      $('.event-summary li:nth-child(1) p').animateNumber({number: 6}, 3000);
-      $('.event-summary li:nth-child(2) p').animateNumber({number: 15}, 3000);
-      $('.event-summary li:nth-child(3) p').animateNumber({number: 3}, 3000);
-      $('.event-summary li:nth-child(4) p').animateNumber({number: 9}, 3000);
+      $('.event-summary li:nth-child(1) p').animateNumber({number: 6}, 1500);
+      $('.event-summary li:nth-child(2) p').animateNumber({number: 15}, 1500);
+      $('.event-summary li:nth-child(3) p').animateNumber({number: 3}, 1500);
+      $('.event-summary li:nth-child(4) p').animateNumber({number: 9}, 1500);
     }, {
       offset: '60%'
     })
@@ -82,4 +87,8 @@ $(document).ready(function(){
     $('#minutes').html(event.strftime('%M'));
     $('#seconds').html(event.strftime('%S'));
   });
+
+
+  // Plugin de colorbox para los invitados
+  $('.guest-info').colorbox({inline:true, width:"80%"});
 });

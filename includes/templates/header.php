@@ -29,7 +29,12 @@
     <meta name="theme-color" content="#fafafa" />
   </head>
 
-  <body>
+  <?php 
+    $file = basename($_SERVER['PHP_SELF']);
+    $page = str_replace('.php', '', $file);
+  ?>
+
+  <body class="<?php echo $page; ?>">
     <!--[if IE]>
       <p class="browserupgrade">
         You are using an <strong>outdated</strong> browser. Please
@@ -69,7 +74,7 @@
         <nav id="principal-nav" class="principal-nav">
           <a href="conferences.php">Conferencia</a>
           <a href="calendary.php">Calendario</a>
-          <a href="#">Invitados</a>
+          <a href="guests.php">Invitados</a>
           <a href="reservations.php">Reservaciones</a>
         </nav>
       </div>
