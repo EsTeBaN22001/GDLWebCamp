@@ -1,5 +1,5 @@
 <?php include_once('includes/templates/header.php'); ?>
-<!-- <?php include_once('includes/functions/functions.php'); ?> -->
+<?php include_once('includes/functions/functions.php'); ?>
 
 <section class="section container">
   <h2>Resumen de registro</h2>
@@ -17,15 +17,16 @@
   $shirts = $_POST['order-shirt'];
   $labels = $_POST['order-labels'];
 
-  // $order = productsJson($tickets, $shirts, $labels);
-  // echo "<pre>";
-  //   var_dump($order);
-  // echo "</pre>";
+  // Events (registry[])
+  $events = $_POST['registry'];
+  $registry = eventsJson($events);
+
+  $order = productsJson($tickets, $shirts, $labels);
   
   ?>
-  <!-- <pre>
-    <?php var_dump($_POST); ?>
-  </pre> -->
+  <pre>
+    <?php var_dump($registry); ?>
+  </pre>
   <?php endif; ?>
 </section>
 
