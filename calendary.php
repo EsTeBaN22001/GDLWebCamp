@@ -16,7 +16,7 @@
 
       $result = $conn->query($sql);
       
-    } catch (\Throwable $th) {
+    } catch (\Exception $e) {
       echo $e->getMessage();
     }
   ?>
