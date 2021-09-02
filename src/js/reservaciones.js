@@ -22,6 +22,7 @@ function reservaciones(){
     const calc = document.querySelector('#calc');
     const error = document.querySelector('#error');
     const btnRegistro = document.querySelector('#btnRegistro');
+    btnRegistro.disabled = true;
     const resumen = document.querySelector('#list-products');
     const total = document.querySelector('#sum-total');
 
@@ -89,6 +90,9 @@ function reservaciones(){
         }
 
         total.innerHTML = `$${totalToPay.toFixed(2)} <br/>`;
+
+        btnRegistro.disabled = false;
+        document.getElementById('total-order').value = totalToPay;
       }
     }
 

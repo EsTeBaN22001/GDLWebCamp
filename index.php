@@ -81,32 +81,32 @@
         <?php 
           do {
             $result = $conn->store_result();
-            $row = $result->fetch_all(MYSQLI_ASSOC); ?>
+            $row = $result->fetch_all(MYSQLI_ASSOC);
 
-            <?php $i = 0; ?>
-            <?php foreach($row as $event): ?>
-            <?php if($i % 2 === 0): ?>
-              <div id="<?php echo strtolower($event['cat_event']); ?>" class="course-info hidden">
-                <?php endif; ?>
+            $i = 0;
+            foreach($row as $event):
+              if($i % 2 === 0): ?>
+                <div id="<?php echo strtolower($event['cat_event']); ?>" class="course-info hidden">
+              <?php endif; ?>
                 <div class="event-detail">
                   <h3><?php echo $event['name_event']; ?></h3>
                   <p><i class="fas fa-clock"></i><?php echo $event['hour_event']; ?></p>
                   <p><i class="fas fa-calendar"></i><?php echo $event['date_event']; ?></p>
                   <p><i class="fas fa-user"></i><?php echo $event['name_guest'] . ' ' . $event['surname_guest']; ?></p>
                 </div>
-                
-                
+
               <?php if($i % 2 === 1): ?>
                   <div class="button-container">
                     <a href="calendary.php" class="button">Ver todos</a>
                   </div>
                 </div>
-              <?php endif; ?>
-          <?php $i++; ?>
-          <?php endforeach; ?>
-          <?php $result->free(); ?>
-          <?php } while ($conn->more_results() && $conn->next_result());
-        ?>
+              <?php endif;
+
+            $i++;
+            endforeach;
+            $result->free(); 
+            } while ($conn->more_results() && $conn->next_result());
+          ?>
       </div>
     </div>
   </div>
