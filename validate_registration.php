@@ -25,7 +25,7 @@
       $stmt->execute();
       $stmt->close();
       $conn->close();
-      header('Location: validate_registration.php?success=1');
+      // header('Location: validate_registration.php?success=1');
     }catch(\Exception $e){
       echo $e->getMessage();
     }

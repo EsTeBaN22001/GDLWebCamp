@@ -44,4 +44,11 @@ function eventsJson(&$events){
   return json_encode($eventsJson);
 }
 
+// Función para debugear (var_dump)
+function debuguear($var){
+  echo "<pre>";
+  var_dump($var);
+  echo "</pre>";
+}
+
 ?>

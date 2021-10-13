@@ -1,0 +1,16 @@
+.result{
+  text-align: center;
+  padding: 1rem;
+  color: $blanco;
+  font-size: 2rem;
+  max-width: 60rem;
+  margin: 0 auto;
+
+  &.correct{
+    background-color: $verde;
+  }
+
+  &.error{
+    background-color: red;
+  }
+}

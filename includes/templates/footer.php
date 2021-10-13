@@ -32,9 +32,9 @@
     crossorigin="anonymous"
     ></script>
     
-    <script src="build/js/jqueryBuild.js"></script>
-    <script src="build/js/bundle.js"></script>
-    <script src="build/js/bundle.js.map"></script>
+    <script src="/build/js/jqueryBuild.js"></script>
+    <script src="/build/js/bundle.js"></script>
+    <script src="/build/js/bundle.js.map"></script>
 
     <script>
       window.jQuery ||
@@ -55,5 +55,6 @@
       ga("send", "pageview");
     </script>
     <script src="https://www.google-analytics.com/analytics.js" async></script>
+
   </body>
 </html>

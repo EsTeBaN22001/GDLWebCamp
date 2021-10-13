@@ -11,12 +11,12 @@
     <!-- Place favicon.ico in the root directory -->
 
     <!-- Estilos css del sitio -->
-    <link rel="stylesheet" href="build/css/app.css" />
-    <link rel="stylesheet" href="build/css/app.css.map" />
+    <link rel="stylesheet" href="/build/css/app.css" />
+    <link rel="stylesheet" href="/build/css/app.css.map" />
 
     <!-- FontAwesome -->
-    <link rel="stylesheet" href="FontAwesome/all.css" />
-    <link rel="stylesheet" href="FontAwesome/all.min.css" />
+    <link rel="stylesheet" href="/FontAwesome/all.css" />
+    <link rel="stylesheet" href="/FontAwesome/all.min.css" />
 
     <!-- GoogleFonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -27,6 +27,8 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
 
     <meta name="theme-color" content="#fafafa" />
+
+    <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/0d68b833e9944ffc540636dd4/4d8710adfdcca411404912518.js");</script>
   </head>
 
   <?php 
@@ -66,16 +68,16 @@
     <div class="nav-bar">
       <div class="container intSection">
         <div class="logo-container">
-          <a href="index.php">
-            <div class="logo"><img src="build/img/logo.svg" alt="Logo GDLWebCamp" /></div>
+          <a href="/index.php">
+            <div class="logo"><img src="/build/img/logo.svg" alt="Logo GDLWebCamp" /></div>
           </a>
           <i id="btn-menu" class="fas fa-bars btn-menu"></i>
         </div>
         <nav id="principal-nav" class="principal-nav">
-          <a href="conferences.php">Conferencia</a>
-          <a href="calendary.php">Calendario</a>
-          <a href="guests.php">Invitados</a>
-          <a href="reservations.php">Reservaciones</a>
+          <a href="/conferences.php">Conferencia</a>
+          <a href="/calendary.php">Calendario</a>
+          <a href="/guests.php">Invitados</a>
+          <a href="/reservations.php">Reservaciones</a>
         </nav>
       </div>
     </div>
