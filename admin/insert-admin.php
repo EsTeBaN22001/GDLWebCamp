@@ -16,17 +16,17 @@ if(isset($_POST['add-admin'])){
   // Insertar en la base de datos
   try {
 
-    require_once 'functions/functions.php';
+    include_once 'functions/functions.php';
 
     $query = 'INSERT INTO admins (user, name, password) VALUES (?,?,?)';
     $stmt = $conn->prepare($query);
     $stmt->bind_param('sss', $user, $name, $passwordHashed);
     $stmt->execute();
     $idRegistry = $stmt->insert_id;
-    if($stmt->affected_rows){
+    if($idRegistry > 0){
       $response = array(
         'response' => 'success',
-        'id_admin' => $idRegistry
+        'idAdmin' => $idRegistry
       );
     }else{
       $response = array(
@@ -40,7 +40,7 @@ if(isset($_POST['add-admin'])){
     echo "Error: " . $e->getMessage();
   }
 
-  return $resposne;
+  die(json_encode($response));
 }
 
 ?>
