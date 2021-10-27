@@ -10,3 +10,11 @@
 .skin-blue .sidebar-menu>li.header{
   color: white;
 }
+
+.login-page .main-footer{
+  display: none;
+}
+
+.swal2-popup{
+  font-size: 1.6rem !important;
+}
