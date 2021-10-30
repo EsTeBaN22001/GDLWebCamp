@@ -26,7 +26,7 @@
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <span class="hidden-xs">Admin</span>
+              <span class="hidden-xs"><?php echo $_SESSION['name']; ?></span>
             </a>
             <ul class="dropdown-menu">
               <!-- Menu Footer-->
@@ -35,7 +35,7 @@
                   <a href="#" class="btn btn-success btn-flat">Ajustes</a>
                 </div>
                 <div class="pull-right">
-                  <a href="#" class="btn btn-success btn-flat">Cerrar sesión</a>
+                  <a href="login.php?signOff=true" class="btn btn-success btn-flat">Cerrar sesión</a>
                 </div>
               </li>
             </ul>

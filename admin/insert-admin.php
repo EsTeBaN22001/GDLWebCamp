@@ -66,19 +66,32 @@ if(isset($_POST['login-admin'])){
 
         if($exists){
           if(password_verify($password, $passwordAdmin)){
+
+            // Iniciar la sesión por $_SESSION
+            session_start();
+
+            // Asignar los datos del usuario a la variable de sessión
+            $_SESSION['user'] = $userAdmin;
+            $_SESSION['name'] = $nameAdmin;
+
             $response = array(
               'response' => 'success',
               'name' => $nameAdmin
             );
+            
           }else{
+
             $response = array(
               'response' => 'Contraseña incorrecta'
             );
+
           }
         }else{
+
           $response = array(
             'response' => 'error'
           );
+
         }
 
       }

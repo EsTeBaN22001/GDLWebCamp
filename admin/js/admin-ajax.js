@@ -69,10 +69,8 @@ $(document).ready(function(){
             'success'
           ).then(function(){
 
-            // Limpiar los inputs del formulario
-            $('#user').val('')
-            $('#name').val('')
-            $('#password').val('')
+            // Redireccionar al usuario
+            window.location.href = 'admin-area.php';
 
           })
 
@@ -82,7 +80,13 @@ $(document).ready(function(){
             'Error!',
             'Usuario o contraseña incorrectos!',
             'error'
-          )
+          ).then(function(){
+
+            // Limpiar los inputs del formulario
+            $('#user').val('')
+            $('#password').val('')
+
+          })
 
         }
       }

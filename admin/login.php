@@ -1,5 +1,12 @@
 <?php 
 
+session_start();
+$signOff = isset($_GET['signOff']);
+
+if($signOff){
+  session_destroy();
+}
+
 include_once 'functions/functions.php';
 include_once 'templates/header.php';
 
@@ -13,11 +20,11 @@ include_once 'templates/header.php';
       <p class="login-box-msg">Inicia sesión aquí!</p>
       <form name="login-admin-form" id="login-admin" method="POST" action="insert-admin.php">
         <div class="form-group has-feedback">
-          <input type="text" class="form-control" name="user" placeholder="Usuario">
+          <input type="text" id="user" class="form-control" name="user" placeholder="Usuario">
           <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
         </div>
         <div class="form-group has-feedback">
-          <input type="password" class="form-control" name="password" placeholder="Contraseña">
+          <input type="password" id="password" class="form-control" name="password" placeholder="Contraseña">
           <span class="glyphicon glyphicon-lock form-control-feedback"></span>
         </div>
         <div class="row">

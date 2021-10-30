@@ -1,5 +1,6 @@
 <?php 
 
+include_once 'functions/sesions.php';
 include_once 'functions/functions.php';
 include_once 'templates/header.php';
 include_once 'templates/bar.php';
