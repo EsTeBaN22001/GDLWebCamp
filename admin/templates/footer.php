@@ -15,6 +15,9 @@
 <script src="/admin/js/bootstrap.min.js"></script>
 <!-- SlimScroll -->
 <script src="/admin/js/jquery.slimscroll.min.js"></script>
+<!-- DataTables -->
+<script src="/admin/js/jquery.dataTables.min.js"></script>
+<script src="/admin/js/dataTables.bootstrap.min.js"></script>
 <!-- FastClick -->
 <script src="/admin/js/fastclick.js"></script>
 <!-- AdminLTE App -->
@@ -40,10 +43,6 @@
 <script src="/admin/js/bootstrap3-wysihtml5.all.min.js"></script>
 <script src="/admin/js/sweetalert2.min.js"></script>
 <script src="/admin/js/admin-ajax.js"></script>
-<script>
-  $(document).ready(function () {
-    $('.sidebar-menu').tree()
-  })
-</script>
+<script src="/admin/js/app.js"></script>
 </body>
 </html>

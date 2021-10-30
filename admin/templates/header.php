@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="/admin/css/font-awesome.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="/admin/css/ionicons.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="/admin/css/dataTables.bootstrap.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="/admin/css/AdminLTE.min.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins

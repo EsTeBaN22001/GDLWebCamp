@@ -96,7 +96,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="../layout/top-nav.html"><i class="fa fa-list-ul" aria-hidden="true"></i>Ver todos</a></li>
+            <li><a href="list-admin.php"><i class="fa fa-list-ul" aria-hidden="true"></i>Ver todos</a></li>
             <li><a href="create-admin.php"><i class="fa fa-plus-circle" aria-hidden="true"></i>Agregar</a></li>
           </ul>
         </li>
