@@ -18,7 +18,7 @@ include_once 'templates/header.php';
     </div>
     <div class="login-box-body">
       <p class="login-box-msg">Inicia sesión aquí!</p>
-      <form name="login-admin-form" id="login-admin" method="POST" action="insert-admin.php">
+      <form name="login-admin-form" id="login-admin" method="POST" action="model-admin.php">
         <div class="form-group has-feedback">
           <input type="text" id="user" class="form-control" name="user" placeholder="Usuario">
           <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
