@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
   // Crear un administrador
-  $('#create-admin').on('submit', function(e){
+  $('#save-registry').on('submit', function(e){
     e.preventDefault();
 
     const data = $(this).serializeArray();
@@ -17,10 +17,11 @@ $(document).ready(function(){
 
         if(data.response == 'success'){
 
+
           // Alerta para notificar al usuario de que se creó el administrador
           swal(
             'Correcto!',
-            'El administrador se creó correctamente!',
+            'El administrador se guardó correctamente!',
             'success'
           ).then(function(){
 
@@ -28,6 +29,8 @@ $(document).ready(function(){
             $('#user').val('')
             $('#name').val('')
             $('#password').val('')
+
+            // window.location.href = 'list-admin.php';
 
           })
 
