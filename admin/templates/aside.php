@@ -87,6 +87,7 @@
             <li><a href="../layout/boxed.html"><i class="fa fa-plus-circle" aria-hidden="true"></i>Agregar</a></li>
           </ul>
         </li>
+        <?php if($_SESSION['level'] == 1): ?>
         <li class="treeview">
           <a href="#">
             <i class="fa fa-user"></i>
@@ -100,6 +101,7 @@
             <li><a href="create-admin.php"><i class="fa fa-plus-circle" aria-hidden="true"></i>Agregar</a></li>
           </ul>
         </li>
+        <?php endif; ?>
         <li class="treeview">
           <a href="#">
             <i class="fa fa-comments"></i>

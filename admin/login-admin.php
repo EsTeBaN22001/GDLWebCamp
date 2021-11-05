@@ -16,7 +16,7 @@ if($_POST['login-admin']){
     $stmt = $conn->prepare($query);
     $stmt->bind_param("s", $user);
     $stmt->execute();
-    $stmt->bind_result($idAdmin, $userAdmin, $nameAdmin, $passwordAdmin, $edited);
+    $stmt->bind_result($idAdmin, $userAdmin, $nameAdmin, $passwordAdmin, $edited, $level);
 
     if($stmt->affected_rows){
 
@@ -29,8 +29,10 @@ if($_POST['login-admin']){
           session_start();
 
           // Asignar los datos del usuario a la variable de sessión
+          $_SESSION['id'] = $idAdmin;
           $_SESSION['user'] = $userAdmin;
           $_SESSION['name'] = $nameAdmin;
+          $_SESSION['level'] = $level;
 
           $response = array(
             'response' => 'success',

@@ -32,7 +32,7 @@
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
-                  <a href="#" class="btn btn-success btn-flat">Ajustes</a>
+                  <a href="edit-admin.php?id=<?php echo $_SESSION['id']; ?>" class="btn btn-success btn-flat">Ajustes</a>
                 </div>
                 <div class="pull-right">
                   <a href="login.php?signOff=true" class="btn btn-success btn-flat">Cerrar sesión</a>
