@@ -25,7 +25,7 @@ $(document).ready(function () {
   })
 
   // Desabilitar el boton de crear registro hasta que se llenen los inputs
-  $('#create-registry').attr('disabled', true);
+  $('#create-registry-admin').attr('disabled', true);
 
   // Boton para verificar el campo de repetir passsword y verificar que sean iguales
   $('#repeat-password').on('input', function(){
@@ -38,13 +38,27 @@ $(document).ready(function () {
       passwordResult.text('Correcto');
       passwordResult.parents('.form-group').addClass('has-success').removeClass('has-error');
       inputPassword.parents('.form-group').addClass('has-success').removeClass('has-error');
-      $('#create-registry').attr('disabled', false);
+      $('#create-registry-admin').attr('disabled', false);
     }else{
       passwordResult.text('Las contraseñas no son iguales');
       passwordResult.parents('.form-group').addClass('has-error').removeClass('has-success');
       inputPassword.parents('.form-group').addClass('has-error').removeClass('has-success');
-      $('#create-registry').attr('disabled', true);
+      $('#create-registry-admin').attr('disabled', true);
     }
 
   })
+
+  //Date picker
+  $('#datepicker').datepicker({
+    autoclose: true
+  })
+
+  
+  //Timepicker
+  $('.timepicker').timepicker({
+    showInputs: false
+  })
+  //Initialize Select2 Elements
+  $('.select2').select2()
+
 })

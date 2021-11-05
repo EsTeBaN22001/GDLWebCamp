@@ -46,7 +46,7 @@ include_once 'templates/aside.php';
                 </div>
                 <div class="box-footer">
                   <input type="hidden" name="registry" value="new">
-                  <button type="submit" class="btn btn-primary" id="create-registry">Añadir</button>
+                  <button type="submit" class="btn btn-primary" id="create-registry-admin">Añadir</button>
                 </div>
               </form>
             </div>

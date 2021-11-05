@@ -43,8 +43,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="../layout/top-nav.html"><i class="fa fa-list-ul" aria-hidden="true"></i>Ver todos</a></li>
-            <li><a href="../layout/boxed.html"><i class="fa fa-plus-circle" aria-hidden="true"></i>Agregar</a></li>
+            <li><a href="list-events.php"><i class="fa fa-list-ul" aria-hidden="true"></i>Ver todos</a></li>
+            <li><a href="create-event.php"><i class="fa fa-plus-circle" aria-hidden="true"></i>Agregar</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -88,19 +88,19 @@
           </ul>
         </li>
         <?php if($_SESSION['level'] == 1): ?>
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-user"></i>
-            <span>Administradores</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="list-admin.php"><i class="fa fa-list-ul" aria-hidden="true"></i>Ver todos</a></li>
-            <li><a href="create-admin.php"><i class="fa fa-plus-circle" aria-hidden="true"></i>Agregar</a></li>
-          </ul>
-        </li>
+          <li class="treeview">
+            <a href="#">
+              <i class="fa fa-user"></i>
+              <span>Administradores</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href="list-admin.php"><i class="fa fa-list-ul" aria-hidden="true"></i>Ver todos</a></li>
+              <li><a href="create-admin.php"><i class="fa fa-plus-circle" aria-hidden="true"></i>Agregar</a></li>
+            </ul>
+          </li>
         <?php endif; ?>
         <li class="treeview">
           <a href="#">

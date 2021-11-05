@@ -39,6 +39,10 @@
 <script src="/admin/js/daterangepicker.js"></script>
 <!-- datepicker -->
 <script src="/admin/js/bootstrap-datepicker.min.js"></script>
+<!-- Select2 -->
+<script src="/admin/js/select2.full.min.js"></script>
+<!-- TimePicker -->
+<script src="/admin/js/bootstrap-timepicker.min.js"></script>
 <!-- Bootstrap WYSIHTML5 -->
 <script src="/admin/js/bootstrap3-wysihtml5.all.min.js"></script>
 <script src="/admin/js/sweetalert2.min.js"></script>

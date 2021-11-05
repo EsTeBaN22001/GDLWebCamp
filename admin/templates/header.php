@@ -17,8 +17,14 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="/admin/css/AdminLTE.min.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
-      folder instead of downloading all of them to reduce the load. -->
+  folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="/admin/css/skins/_all-skins.min.css">
+  <!-- DatePicker -->
+  <link rel="stylesheet" href="/admin/css/bootstrap-datepicker.min.css">
+  <!-- Select2 -->
+  <link rel="stylesheet" href="/admin/css/select2.min.css">
+  <!-- TimePicker -->
+  <link rel="stylesheet" href="/admin/css/bootstrap-timepicker.min.css">
 
   <link rel="stylesheet" href="/admin/css/admin.css">
 
