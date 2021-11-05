@@ -30,7 +30,7 @@ $(document).ready(function(){
             $('#name').val('')
             $('#password').val('')
 
-            // window.location.href = 'list-admin.php';
+            window.location.href = 'list-admin.php';
 
           })
 
@@ -47,52 +47,62 @@ $(document).ready(function(){
     })
   })
 
-  // Loguear un administrador
-  $('#login-admin').on('submit', function(e){
+  // Eliminar un administrador
+  $('.delete-registry').on('click', function(e){
+
     e.preventDefault();
-
-    const data = $(this).serializeArray();
     
-    $.ajax({
+    const dataId = $(this).attr('data-id');
+    const dataType = $(this).attr('data-type');
 
-      type: $(this).attr('method'),
-      data: data,
-      url: $(this).attr('action'),
-      dataType: 'json',
+    swal({
+      title: '¿Estás seguro/a?',
+      text: "Un registro eliminado no se puede recuperar!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Si, eliminar!',
+      cancelButtonText: 'Cancelar'
+    }).then(function(){
+      
+      $.ajax({
+        type:'post',
+        data: {
+          'id': dataId,
+          'registry': 'delete'
+        },
+        url: `model-${dataType}.php`,
+  
+        success: function(data){
+          
+          const result = JSON.parse(data);
 
-      success: function(data){
+          if(result.response == 'success'){
 
-        if(data.response == 'success'){
-          const results = data;
+            swal(
+              'Eliminado!',
+              'Registro eliminado.',
+              'success'
+            ).then(function(){
+              jQuery(`[data-id="${result.deletedId}"]`).parents('tr').remove();
+            })
 
-          // Alerta para notificar al usuario de que se logueó el administrador
-          swal(
-            'Correcto!',
-            `Bienvenido/a ${results.name}!`,
-            'success'
-          ).then(function(){
+          }else{
 
-            // Redireccionar al usuario
-            window.location.href = 'admin-area.php';
+            swal({
+              icon: 'error',
+              title: 'Error!',
+              text: 'No se pudo eliminar!'
+            })
 
-          })
-
-        }else{
-
-          swal(
-            'Error!',
-            'Usuario o contraseña incorrectos!',
-            'error'
-          ).then(function(){
-
-            // Limpiar los inputs del formulario
-            $('#user').val('')
-            $('#password').val('')
-
-          })
+          }
 
         }
-      }
+      })
+
     })
+
   })
+  
 })

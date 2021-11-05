@@ -44,5 +44,6 @@
 <script src="/admin/js/sweetalert2.min.js"></script>
 <script src="/admin/js/admin-ajax.js"></script>
 <script src="/admin/js/app.js"></script>
+<script src="/admin/js/login-ajax.js"></script>
 </body>
 </html>

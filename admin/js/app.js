@@ -27,6 +27,7 @@ $(document).ready(function () {
   // Desabilitar el boton de crear registro hasta que se llenen los inputs
   $('#create-registry').attr('disabled', true);
 
+  // Boton para verificar el campo de repetir passsword y verificar que sean iguales
   $('#repeat-password').on('input', function(){
 
     let newPassword = $('#password').val();

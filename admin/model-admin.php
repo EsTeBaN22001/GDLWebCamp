@@ -1,5 +1,4 @@
 <?php 
-error_reporting(E_ALL ^ E_NOTICE);
 include_once 'functions/functions.php';
 
 // Obtengo los datos de post y los guardo en variables
@@ -8,7 +7,7 @@ if( isset($_POST['name']) ) { $name = $_POST['name']; }
 if( isset($_POST['password']) ) { $password = $_POST['password']; }
 if( isset($_POST['id_registry']) ) { $idRegistry = $_POST['id_registry']; }
 
-if( isset($_POST['registry'])  && isset($_POST['registry']) == 'new' ){
+if( isset($_POST['registry'])  && $_POST['registry'] == 'new' ){
 
   // Hasheo la contraseña antes de almacenarla
   $options = array(
@@ -56,7 +55,7 @@ if( isset($_POST['registry'])  && isset($_POST['registry']) == 'new' ){
 
 }
 
-if( isset($_POST['registry'])  && isset($_POST['registry']) == 'update' ){
+if( isset($_POST['registry'])  && $_POST['registry'] == 'update' ){
 
   try{
 
@@ -115,51 +114,29 @@ if( isset($_POST['registry'])  && isset($_POST['registry']) == 'update' ){
 
 }
 
-if($_POST['login-admin']){
+if( isset($_POST['registry'])  && $_POST['registry'] == 'delete' ){
+  
+  $deleteId = $_POST['id'];
 
-
-  // Insertar en la base de datos
   try {
-
-    $query = 'SELECT * FROM admins WHERE user = ?';
+    
+    $query = 'DELETE FROM admins WHERE id_admin = ?';
     $stmt = $conn->prepare($query);
-    $stmt->bind_param("s", $user);
+    $stmt->bind_param('i', $deleteId);
     $stmt->execute();
-    $stmt->bind_result($idAdmin, $userAdmin, $nameAdmin, $passwordAdmin, $edited);
 
     if($stmt->affected_rows){
 
-      $exists = $stmt->fetch();
+      $response = array(
+        'response' => 'success',
+        'deletedId' => $deleteId
+      );
 
-      if($exists){
-        if(password_verify($password, $passwordAdmin)){
+    }else{
 
-          // Iniciar la sesión por $_SESSION
-          session_start();
-
-          // Asignar los datos del usuario a la variable de sessión
-          $_SESSION['user'] = $userAdmin;
-          $_SESSION['name'] = $nameAdmin;
-
-          $response = array(
-            'response' => 'success',
-            'name' => $nameAdmin
-          );
-          
-        }else{
-
-          $response = array(
-            'response' => 'Contraseña incorrecta'
-          );
-
-        }
-      }else{
-
-        $response = array(
-          'response' => 'error'
-        );
-
-      }
+      $response = array(
+        'response' => 'error'
+      );
 
     }
 
@@ -167,18 +144,15 @@ if($_POST['login-admin']){
     $conn->close();
 
   } catch (\Exception $e) {
-
-    $response = array(
-      'response' => $e->getMessage()
-    );
     
+    $response = array(
+      'error' => $e->getMessage()
+    );
+
   }
-  
+
   die(json_encode($response));
 
 }
-
-
-
 
 ?>
